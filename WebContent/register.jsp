@@ -98,7 +98,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 						<div class="well no-padding">
 
-							<form action="php/demo-register.php" id="smart-form-register" class="smart-form client-form">
+							<form action="registersuccess.jsp" id="smart-form-register" class="smart-form client-form">
 								<header>
 									 Registration Of Our System is FREE
 								</header>
@@ -131,10 +131,7 @@
 
 								<fieldset>
 									
-
-									
-
-									<section>
+								<section>
 										
 										<label class="checkbox">
 											<input type="checkbox" name="terms" id="terms">
