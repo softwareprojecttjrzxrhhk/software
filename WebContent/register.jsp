@@ -98,7 +98,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 						<div class="well no-padding">
 
-							<form action="registersuccess.jsp" id="smart-form-register" class="smart-form client-form">
+							<form action="login.jsp" id="smart-form-register" class="smart-form client-form">
 								<header>
 									 Registration Of Our System is FREE
 								</header>

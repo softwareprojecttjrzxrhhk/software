@@ -1,8 +1,6 @@
-<%@ page language ="java" contentType="text/html;charset=GB18030" pageEncoding="GB18030" %>
-
-<%@page import ="java.util.ArrayList" %>
-
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
@@ -208,7 +206,7 @@
 				
 				<!-- START ROW -->
 				
-				<h1  size="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎使用信息更新系统</h1>
+				<h1  size="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;娆㈣繋浣跨敤淇℃伅鏇存柊绯荤粺</h1>
 					<div class="row">
 				
 						<!-- NEW COL START -->

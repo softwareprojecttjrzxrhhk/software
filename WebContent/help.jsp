@@ -148,7 +148,7 @@
 					</li>
 						
 					<li>
-						<a href="information.jsp"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Search Information</span></a>
+						<a href="lookFriends.jsp"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Search Information</span></a>
 					</li>
 								
 					<li>
@@ -183,7 +183,7 @@
 
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
-					<li>Home</li>
+					<li>Home</li><li>Help</li>
 				</ol>
 				<!-- end breadcrumb -->
 
@@ -208,7 +208,7 @@
 				
 				<!-- START ROW -->
 				
-				<h1  size="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎使用信息更新系统</h1>
+				<h1 size="60">  帮助信息 </h1>
 					<div class="row">
 				
 						<!-- NEW COL START -->
