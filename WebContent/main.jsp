@@ -148,15 +148,15 @@
 					</li>
 						
 					<li>
-						<a href="information.jsp"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Search Information</span></a>
+						<a href="information.jsp"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Look Information</span></a>
 					</li>
 								
 					<li>
-						<a href="Addnewbook.jsp"><i class="fa fa-lg fa-fw fa-calendar"></i> <span class="menu-item-parent">Add New Book</span></a>
+						<a href="Addnewurl.jsp"><i class="fa fa-lg fa-fw fa-calendar"></i> <span class="menu-item-parent">Add New Url</span></a>
 					</li>
 									
 					<li>
-						<a href="searchwithname.jsp"><i class="fa fa-lg fa-fw fa-desktop"></i> <span class="menu-item-parent">Search By Author Name</span></a>
+						<a href="searchwithtag.jsp"><i class="fa fa-lg fa-fw fa-desktop"></i> <span class="menu-item-parent">Search By Url Name</span></a>
 					</li>
 					<li>
 						<a href="help.jsp"><i class="fa fa-lg fa-fw fa-inbox"></i> <span class="menu-item-parent">Help Information</span></a>
@@ -208,7 +208,7 @@
 				
 				<!-- START ROW -->
 				
-				<h1  size="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎使用信息更新系统</h1>
+				<h1  size="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome Use Internet </h1>
 					<div class="row">
 				
 						<!-- NEW COL START -->
