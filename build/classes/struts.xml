@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    <!-- 所有的Action定义都应该放在package下 -->
+    <package name="LogAction" extends="struts-default">
+    	<action name = "LoginSearch" class = "LogAction.LoginAction" method = "search">
+        	<result name = "success">/main.jsp</result>				
+			<result name = "error">/wronglogin.jsp</result>
+        </action>
+        <action name = "Register" class = "LogAction.registerAction" method = "register">
+        	<result name ="success">/login.jsp</result>
+        	<result name = "error">/wrongregister.jsp</result>
+        </action>
+    </package>
+    <package name="PersonMessage" extends="struts-default">
+    	<action name = "Allinformation" class = "PersonMessage.lookinformation" method = "getinformation">
+        	<result name = "success">/information.jsp</result>						
+        </action>
+        <action name = "searchref" class = "PersonMessage.searchwithtag" method = "searchhref">
+        	<result name = "success">/searchwithtag.jsp</result>					
+        </action>
+        <action name = "search" class = "PersonMessage.searchwithtag" method = "search">
+        	<result name = "success">/searchresult.jsp</result>
+        	<result name = "notag">/noresult.jsp</result>
+        	<result name = "noresult">/noresult.jsp</result>					
+        </action>
+        <action name = "main" class = "PersonMessage.lookinformation" method = "mainhref">
+        	<result name = "success">/main.jsp</result>					
+        </action>
+        <action name = "helphref" class = "PersonMessage.lookinformation" method = "helphref">
+        	<result name = "success">/help.jsp</result>					
+        </action>   
+    </package>
+    <package name="DomainMessage" extends="struts-default">
+    	<action name = "Addhref" class = "DomainMessage.AddnewurlAction" method = "passhref">
+        	<result name = "success">/Addnewurl.jsp</result>					
+        </action>
+    	<action name = "Addmessage" class = "DomainMessage.AddnewurlAction" method = "addmess">
+        	<result name = "success">/successdomain.jsp</result>
+        	<result name = "one">/wrongaddnewurl.jsp</result>						
+        </action>
+        <action name = "deleteurl" class = "DomainMessage.deleteurlAction" method = "deleteurl">
+        	<result name = "success">/successdomain.jsp</result>      						
+        </action>
+        <action name = "updatehref" class = "DomainMessage.updateurlAction" method = "uphref">
+        	<result name = "success">/update.jsp</result>      						
+        </action>
+        <action name = "updateurl" class = "DomainMessage.updateurlAction" method = "upurl">
+        	<result name = "success">/successdomain.jsp</result>      						
+        </action>   
+    </package>
+</struts>
