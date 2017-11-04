@@ -297,7 +297,7 @@
 												
 												<tr>
 												
-												<h1>No Result</h1>
+												<h1  style="color:red ">No Result</h1>
 												</tr>
 												
 									 		

@@ -206,8 +206,8 @@
 				
 				<!-- START ROW -->
 				
-				<h1  size="80">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Successd Domain </h1>
-				<img src="img/urlpic.jpg" alt="" class="pull-right display-image" style="width:210px">
+				<h1 size="80" style="color:red ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Successd Domain </h1>
+				<img src="img/urlpic.jpg" alt=""  style="width:210px">
 					<div class="row">
 				
 						<!-- NEW COL START -->

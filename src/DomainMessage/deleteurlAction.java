@@ -34,8 +34,8 @@ public class deleteurlAction {
   
   public String deleteurl()
   {
-    System.out.println(email);
-    System.out.println(url);
+    //System.out.println(email);
+    //System.out.println(url);
     String sure = null;
     DB Mysql = new DB();   
     //System.out.println(UrlName);

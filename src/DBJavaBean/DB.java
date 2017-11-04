@@ -106,10 +106,62 @@ public class DB implements ServletRequestAware{
   {
     try{
       String sure = null;
-      String sql ="delete from mail where mail='"+userName+"' and url='"+url+"'";
+      String sql1 ="delete from mail where mail='"+userName+"' and url='"+url+"'";
+      String sql2 ="delete from mails where mails='"+userName+"' and url='"+url+"'";
       st = getStatement();
-      int row=st.executeUpdate(sql);
+      int row1=st.executeUpdate(sql1);
+      int row2=st.executeUpdate(sql2);
       sure = "success";    
+      return sure;
+    }catch(Exception e){
+      e.printStackTrace();
+      return null;
+          }
+              
+  }
+  
+  public String updateurl(HttpServletRequest request,String email,String UrlName,String urlcode,String rowid,String state,String oldurl,String oldstate)
+  {
+      
+    try{
+      String sure = null;
+      //rs = selecturl(request,email,oldurl);
+      //if(rs.next())
+      //{
+        //已经有一个了
+        //sure = "one";
+      //}
+      //else{
+        String sql1 ="update mail SET mail='"+email+"', tag='"+UrlName+"', url='"+urlcode+"', rowid='"+rowid+"', state='"+state+"' where mail='"+email+"' and url='"+oldurl+"'";
+        st = getStatement();
+        int row1=st.executeUpdate(sql1);
+        if((oldstate.equals("open")) && (state.equals("open")))
+        {
+          //System.out.println("1");
+          String sql2 ="update mails SET mails='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mails='"+email+"' and url='"+oldurl+"'";
+          st = getStatement();
+          int row2=st.executeUpdate(sql2);
+        }
+        else if((oldstate.equals("close")) && (state.equals("open")))
+        {
+          //System.out.println("2");
+          String sql2 ="insert into mails"+" (mails,rowid,url)"+" values("+"'"+email+"'"+","+"'"+rowid+"'"+","+"'"+urlcode+"'"+")";
+          st = getStatement();
+          int row2=st.executeUpdate(sql2);
+        }
+        else if((oldstate.equals("open")) && (state.equals("close")))
+        {
+          //System.out.println("3");
+          String sql2 ="delete from mails where mails='"+email+"' and url='"+urlcode+"'";
+          st = getStatement();
+          int row2=st.executeUpdate(sql2);
+        }
+        else
+        {
+          //System.out.println("4");
+        }
+        sure = "success";
+      //}
       return sure;
     }catch(Exception e){
       e.printStackTrace();
@@ -124,17 +176,19 @@ public class DB implements ServletRequestAware{
     try{
       String sure = null;
       rs = selecturl(request,email,url);
-      if(rs.next())
-      {
+      //if(rs.next())
+      //{
         //已经有一个了
-        sure = "one";
-      }
-      else{
-        String sql ="insert into mail"+" (mail,rowid,url,tag,state)"+" values("+"'"+email+"'"+","+"'"+rowid+"'"+","+"'"+url+"'"+","+"'"+tag+"'"+","+"'open'"+")";
+        //sure = "one";
+      //}
+      //else{
+        String sql1 ="insert into mail"+" (mail,rowid,url,tag,state)"+" values("+"'"+email+"'"+","+"'"+rowid+"'"+","+"'"+url+"'"+","+"'"+tag+"'"+","+"'open'"+")";
+        String sql2 ="insert into mails"+" (mails,rowid,url)"+" values("+"'"+email+"'"+","+"'"+rowid+"'"+","+"'"+url+"'"+")";
         st = getStatement();
-        int row=st.executeUpdate(sql);
+        int row1=st.executeUpdate(sql1);
+        int row2=st.executeUpdate(sql2);
         sure = "success";
-      }
+      //}
       return sure;
     }catch(Exception e){
       e.printStackTrace();

@@ -206,7 +206,7 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
-						<h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-home"></i> Add New URL</h1>
+						<h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-home"></i>Update The URL</h1>
 					</div>
 					
 				</div>
@@ -246,6 +246,8 @@
 										<s:form action="updateurl" class="smart-form">									
 											 <input name="email" type="hidden" value="<s:property value="email"/>" />
 											<s:iterator value="listName" id="u" >
+											<input name="oldurl" type="hidden" value="<s:property value="#u.url"/>" />
+											<input name="oldstate" type="hidden" value="<s:property value="#u.state"/>" />
 											<fieldset>										
 											<!--  	<section>
 													<label class="label">New Book Number</label>
@@ -260,7 +262,7 @@
 													</label>
 												</section>		
 											  	<section>
-													<label class="label">URL CODE</label>
+													<label class="label">URL ADDRESS</label>
 													<label class="input">
 														<input type="text" name="urlcode" value="<s:property value="#u.url"/>" class="input-sm" >
 													</label>
@@ -270,10 +272,10 @@
 													<label class="label">The Url State</label>
 													<div class="inline-group">
 														<label class="radio">
-															<input type="radio" name="radio-inline" checked="checked">
+															<input type="radio" name="state" checked="checked" value="open">
 															<i></i>OPEN</label>
 														<label class="radio">
-															<input type="radio" name="radio-inline">
+															<input type="radio" name="state" value="close">
 															<i></i>CLOSE</label>
 														
 													</div>

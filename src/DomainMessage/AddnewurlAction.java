@@ -45,7 +45,7 @@ public class AddnewurlAction {
     //System.out.println(urlcode);
     //System.out.println(rowid1);
     //System.out.println(email);
-    rowid = email+urlcode;
+    rowid = email+urlcode+UrlName;
     sure = Mysql.inserturl(request,email,UrlName,urlcode,rowid);
     //sure = "success"; 
     return sure;

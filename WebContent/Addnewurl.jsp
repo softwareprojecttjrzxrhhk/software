@@ -259,7 +259,7 @@
 													</label>
 												</section>		
 											  	<section>
-													<label class="label">URL CODE</label>
+													<label class="label">URL ADDRESS</label>
 													<label class="input">
 														<input type="text" name="urlcode" value="" class="input-sm" >
 													</label>

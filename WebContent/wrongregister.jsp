@@ -103,7 +103,7 @@
 								<header>
 									 Registration Of Our System is FREE
 								</header>
-								<h1>The Email has been used. Please Enter A New Email</h1>
+								<h1 style="color:red ">The Email has been used. Please Enter A New Email</h1>
 								<fieldset>
 
 									<section>

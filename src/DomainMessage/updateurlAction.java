@@ -19,7 +19,13 @@ public class updateurlAction {
     public HttpServletRequest request;
     DB Mysql = new DB();
     ArrayList listName =null;
-       
+    
+    private String UrlName;
+    private String urlcode;
+    private String rowid;
+    private String state;
+    private String oldurl;
+    private String oldstate;
     public String getEmail() {
       return email;
     }
@@ -83,11 +89,43 @@ public class updateurlAction {
       this.listName = listName;
     }
     
-    public String updateurl()
+    public String upurl()
     {
       String sure = null;
-      result5 = Mysql.selectupdate(request,email,url);
-      sure = myMessage(request,email,url);
+      rowid = email+urlcode+UrlName; 
+      
+      sure = Mysql.updateurl(request,email,UrlName,urlcode,rowid,state,oldurl,oldstate);
+      
       return sure;
+    }
+    public String getUrlName() {
+      return UrlName;
+    }
+    public void setUrlName(String urlName) {
+      UrlName = urlName;
+    }
+    public String getUrlcode() {
+      return urlcode;
+    }
+    public void setUrlcode(String urlcode) {
+      this.urlcode = urlcode;
+    }
+    public String getState() {
+      return state;
+    }
+    public void setState(String state) {
+      this.state = state;
+    }
+    public String getOldurl() {
+      return oldurl;
+    }
+    public void setOldurl(String oldurl) {
+      this.oldurl = oldurl;
+    }
+    public String getOldstate() {
+      return oldstate;
+    }
+    public void setOldstate(String oldstate) {
+      this.oldstate = oldstate;
     }
 }
