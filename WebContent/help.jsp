@@ -208,15 +208,35 @@
 					<div class="row">
 				
 						<!-- NEW COL START -->
-						
+						 
 				
 							<!-- Widget ID (each widget will need unique ID)-->
 							<div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false">
 								
 				
 								<!-- widget div-->
-
-									
+								<h1>This is an introduction to our product and help you to know how to use it</h1>
+								<h2>How we work</h2>
+								<h2>Our product aims at help those who don't want to check websites everyday, but they want to pay attention to some news or answers for some questions which they are interested in. After registering and adding URLS, we will send an email depends on the URLS that you've added.The email contain all the new information on the websites you have added. Yeah! all new information, it means that if you add an question's URLS from tieba or other website, we will send the message which is just answered after the last time we have sent an email to you.  
+								<h2>If you want to use this product, you can follow these steps</h2>
+								<h2>1.Register</h2>
+								<h3>When you access our website, you can see a button has "CREATE AN ACCOUNT" on it. Just click that button. After that, the web will turn to register page, what you need to do is filling in your email and set your password.</h3>
+									<img src="img/help/creatcnt.png" alt="SmartAdmin">
+								<h3>After pressing the button, the web will turn to register page, what you need to do is filling in your email and set your password.</h3>
+								<h2>After verifying your accout or login, you will turn to the home page</h2>
+									<img src="img/help/home.png" alt="SmartAdmin">
+								<h2>All the functions are at the left side of the web</h2>
+								<h2>2.Add new URL</h2>
+								<h3>The most important thing is to add the URL. When you access this page, you have to add the URL which you are interested in and the tags which can help you manage your URLS if you add lots of URLS on our web.</h3>
+									<img src="img/help/add.jpg" alt="SmartAdmin">
+								<h2>3.View all URLS</h2>
+								<h3>If you want to check or edit the URLS you have added, just click the the "Look Information". If you want to edit or delete one of the URLS just click edit button or delete button.</h3>
+									<img src="img/help/all.jpg" alt="SmartAdmin">
+								<h2>4.Search by Urltag</h2>
+								<h3>If you want to search your URLS by tags to avoid check it one by one, just click the the "Search by URLTag" and input which kind of tag you want to search</h3>
+									<img src="img/help/tag.jpg" alt="SmartAdmin">
+								
+								
 			
 									<!-- end widget content -->
 				

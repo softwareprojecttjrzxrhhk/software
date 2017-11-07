@@ -109,22 +109,28 @@ public class Main {
 		sendMail();
 	}
 	public static void main(String[] args) {
-	  Timer time=new Timer();
-	  
-		//myGo();
-		time.scheduleAtFixedRate(new Task(), 0, 5000);
+    Timer time=new Timer();
+    
+    //myGo();
+    //time.scheduleAtFixedRate(new Task(), 0, 5000);
 
-		System.out.println("main finish");
-	}
-}
-class Task extends TimerTask {
-
-  @Override
-  public void run() {
-    //System.out.println("dddd");
-    Main.myGo();
-
-
+    System.out.println("main finish");
   }
-
 }
+//class Task extends TimerTask {
+//
+//  @Override
+//  public void run() {
+//    //System.out.println("dddd");
+//    try {
+//      MailSend.sendMail("648923307@qq.com", "aa");
+//    } catch (Exception e) {
+//      // TODO Auto-generated catch block
+//      e.printStackTrace();
+//    }
+//
+//
+//  }
+//}
+
+
