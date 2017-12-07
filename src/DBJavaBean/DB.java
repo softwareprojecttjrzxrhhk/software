@@ -121,7 +121,7 @@ public class DB implements ServletRequestAware{
               
   }
   
-  public String updateurl(HttpServletRequest request,String email,String UrlName,String urlcode,String rowid,String state,String oldurl,String oldstate)
+  public String updateurl1(HttpServletRequest request,String email,String UrlName,String urlcode,String rowid,String oldurl,String state)
   {
       
     try{
@@ -133,34 +133,67 @@ public class DB implements ServletRequestAware{
         //sure = "one";
       //}
       //else{
-        String sql1 ="update mail SET mail='"+email+"', tag='"+UrlName+"', url='"+urlcode+"', rowid='"+rowid+"', state='"+state+"' where mail='"+email+"' and url='"+oldurl+"'";
+        String sql1 ="update mail SET mail='"+email+"', tag='"+UrlName+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
         st = getStatement();
         int row1=st.executeUpdate(sql1);
-        if((oldstate.equals("open")) && (state.equals("open")))
+        if(state.equals("close"))
         {
-          //System.out.println("1");
-          String sql2 ="update mails SET mails='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mails='"+email+"' and url='"+oldurl+"'";
-          st = getStatement();
-          int row2=st.executeUpdate(sql2);
+          
         }
-        else if((oldstate.equals("close")) && (state.equals("open")))
+        else
         {
-          //System.out.println("2");
-          String sql2 ="insert into mails"+" (mails,rowid,url)"+" values("+"'"+email+"'"+","+"'"+rowid+"'"+","+"'"+urlcode+"'"+")";
+          String sql2 ="update mails SET mail='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
           st = getStatement();
-          int row2=st.executeUpdate(sql2);
+          int row2=st.executeUpdate(sql1);
         }
-        else if((oldstate.equals("open")) && (state.equals("close")))
+        sure = "success";
+      //}
+      return sure;
+    }catch(Exception e){
+      e.printStackTrace();
+      return null;
+          }
+              
+  }
+  public String updateurl(HttpServletRequest request,String email,String urlcode,String state,String tag)
+  {
+      
+    try{
+      String sure = null;
+      //rs = selecturl(request,email,oldurl);
+      //if(rs.next())
+      //{
+        //已经有一个了
+        //sure = "one";
+      //}
+      //else{
+      //String sql = "select state from mail where mail='"+email+"'"+" and url='"+urlcode+"'";
+        
+//        st = getStatement();
+//        int row1=st.executeUpdate(sql);
+     String rowid = email+urlcode+tag;   
+        if(state.equals("open"))
         {
-          //System.out.println("3");
+          System.out.println("2");
+          String sql1 ="update mail SET state='close' where mail='"+email+"' and url='"+urlcode+"'";
+          st = getStatement();
+          int row1=st.executeUpdate(sql1);
           String sql2 ="delete from mails where mails='"+email+"' and url='"+urlcode+"'";
+          
           st = getStatement();
           int row2=st.executeUpdate(sql2);
         }
         else
         {
-          //System.out.println("4");
+          System.out.println("3");
+          String sql1 ="update mail SET state='open' where mail='"+email+"' and url='"+urlcode+"'";
+          st = getStatement();
+          int row1=st.executeUpdate(sql1);
+          String sql2 ="insert into mails"+" (mails,rowid,url)"+" values("+"'"+email+"'"+","+"'"+rowid+"'"+","+"'"+urlcode+"'"+")";
+          st = getStatement();
+          int row2=st.executeUpdate(sql2);
         }
+        
         sure = "success";
       //}
       return sure;
@@ -202,6 +235,19 @@ public class DB implements ServletRequestAware{
   public ResultSet selecturl(HttpServletRequest request,String userName,String url)  
   {
     try{
+      String sql = "select * from mail where mail='"+userName+"'"+" and url='"+url+"'";
+      st = getStatement();
+      return st.executeQuery(sql);
+    }catch(Exception e){
+      e.printStackTrace();
+      return null;
+    }
+  }
+  
+  public ResultSet selectstate(HttpServletRequest request,String userName,String url)  
+  {
+    try{
+      
       String sql = "select * from mail where mail='"+userName+"'"+" and url='"+url+"'";
       st = getStatement();
       return st.executeQuery(sql);
