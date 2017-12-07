@@ -51,9 +51,6 @@
         	<result name = "success">/successdomain.jsp</result>
         	<result name = "one">/noupdate.jsp</result> 
         	     						
-        </action>
-        <action name = "updatestate" class = "DomainMessage.updateurlAction" method = "upstate">
-        	<result name = "success">/successdomain.jsp</result>   						
-        </action>      
+        </action>   
     </package>
 </struts>

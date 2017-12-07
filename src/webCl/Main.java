@@ -4,11 +4,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
-<<<<<<< HEAD
 import java.util.Timer;
 import java.util.TimerTask;
-=======
->>>>>>> HHk
 
 public class Main {
 	public static void textWrite(final String fileName, final String cont) {
@@ -50,14 +47,8 @@ public class Main {
 			System.out.println(ana[1]);
 			BaiduTieba aaa = new BaiduTieba(ana[2]);
 			aaa.saveCtt();
-<<<<<<< HEAD
 		}
 		
-=======
-			
-			
-		}
->>>>>>> HHk
 	}
 	public static void crawlWeb() {
 		String sql = "select * from urlsdb.mails order by url";
@@ -82,11 +73,7 @@ public class Main {
 		}
 	}
 	public static void sendMail() {
-<<<<<<< HEAD
 		String sql = "select * from urlsdb.mails order by mails";
-=======
-		String sql = "select * from urlsdb.mails order by mail";
->>>>>>> HHk
 		Connection conn = SqlCon.con();
 		User curSendUser = null;
 		try {
@@ -95,11 +82,7 @@ public class Main {
 			String lastMail = "hh996896116@163.com";
 			String mail;
 			while (rs.next()) {
-<<<<<<< HEAD
 				mail = rs.getString("mails");
-=======
-				mail = rs.getString("mail");
->>>>>>> HHk
 				if (!mail.equals(lastMail)) {
 					if (curSendUser != null) {
 						curSendUser.send();
@@ -126,7 +109,6 @@ public class Main {
 		sendMail();
 	}
 	public static void main(String[] args) {
-<<<<<<< HEAD
 	    //Timer time=new Timer();
 	    //
 	    myGo();
@@ -152,10 +134,3 @@ public class Main {
 //}
 
 
-=======
-		myGo();
-
-		System.out.println("main finish");
-	}
-}
->>>>>>> HHk

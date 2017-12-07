@@ -100,11 +100,7 @@ public class BaiduTieba {
         }
         while (m.find()) {
         	if (hasBegin) {
-<<<<<<< HEAD
         		ctt.append(m.group(1) + "  " + m.group(2) + "  " +  m.group(3) + "<br/>\r\n");
-=======
-        		ctt.append(m.group(1) + "  " + m.group(2) + "  " +  m.group(3) + "\r\n");
->>>>>>> HHk
         		this.floor = Integer.parseInt(m.group(2));
         	}
         	if (Integer.parseInt(m.group(2)) == floor) {

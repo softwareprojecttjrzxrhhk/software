@@ -1,6 +1,6 @@
 package DBJavaBean;
 
-//
+
 import java.sql.*;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
@@ -17,8 +17,8 @@ public class DB implements ServletRequestAware{
   private String driverName="com.mysql.jdbc.Driver";
   private String url = "jdbc:mysql://127.0.0.1:3306/urlsdb";//?useUnicode=true&characterEncoding=gbk
   private String user ="root";
-  private String password="tjr19970907";
-  //private String password = "1234";
+  //private String password="tjr19970907";
+  private String password = "1234";
   private Connection con = null;
   private Statement st =null;
   private ResultSet rs = null;
@@ -121,7 +121,7 @@ public class DB implements ServletRequestAware{
               
   }
   
-  public String updateurl1(HttpServletRequest request,String email,String UrlName,String urlcode,String rowid,String oldurl,String state)
+  public String updateurl(HttpServletRequest request,String email,String UrlName,String urlcode,String rowid,String state,String oldurl,String oldstate)
   {
       
     try{
@@ -133,67 +133,34 @@ public class DB implements ServletRequestAware{
         //sure = "one";
       //}
       //else{
-        String sql1 ="update mail SET mail='"+email+"', tag='"+UrlName+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
+        String sql1 ="update mail SET mail='"+email+"', tag='"+UrlName+"', url='"+urlcode+"', rowid='"+rowid+"', state='"+state+"' where mail='"+email+"' and url='"+oldurl+"'";
         st = getStatement();
         int row1=st.executeUpdate(sql1);
-        if(state.equals("close"))
+        if((oldstate.equals("open")) && (state.equals("open")))
         {
-          
-        }
-        else
-        {
-          String sql2 ="update mails SET mail='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
-          st = getStatement();
-          int row2=st.executeUpdate(sql1);
-        }
-        sure = "success";
-      //}
-      return sure;
-    }catch(Exception e){
-      e.printStackTrace();
-      return null;
-          }
-              
-  }
-  public String updateurl(HttpServletRequest request,String email,String urlcode,String state,String tag)
-  {
-      
-    try{
-      String sure = null;
-      //rs = selecturl(request,email,oldurl);
-      //if(rs.next())
-      //{
-        //已经有一个了
-        //sure = "one";
-      //}
-      //else{
-      //String sql = "select state from mail where mail='"+email+"'"+" and url='"+urlcode+"'";
-        
-//        st = getStatement();
-//        int row1=st.executeUpdate(sql);
-     String rowid = email+urlcode+tag;   
-        if(state.equals("open"))
-        {
-          System.out.println("2");
-          String sql1 ="update mail SET state='close' where mail='"+email+"' and url='"+urlcode+"'";
-          st = getStatement();
-          int row1=st.executeUpdate(sql1);
-          String sql2 ="delete from mails where mails='"+email+"' and url='"+urlcode+"'";
-          
+          //System.out.println("1");
+          String sql2 ="update mails SET mails='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mails='"+email+"' and url='"+oldurl+"'";
           st = getStatement();
           int row2=st.executeUpdate(sql2);
         }
-        else
+        else if((oldstate.equals("close")) && (state.equals("open")))
         {
-          System.out.println("3");
-          String sql1 ="update mail SET state='open' where mail='"+email+"' and url='"+urlcode+"'";
-          st = getStatement();
-          int row1=st.executeUpdate(sql1);
+          //System.out.println("2");
           String sql2 ="insert into mails"+" (mails,rowid,url)"+" values("+"'"+email+"'"+","+"'"+rowid+"'"+","+"'"+urlcode+"'"+")";
           st = getStatement();
           int row2=st.executeUpdate(sql2);
         }
-        
+        else if((oldstate.equals("open")) && (state.equals("close")))
+        {
+          //System.out.println("3");
+          String sql2 ="delete from mails where mails='"+email+"' and url='"+urlcode+"'";
+          st = getStatement();
+          int row2=st.executeUpdate(sql2);
+        }
+        else
+        {
+          //System.out.println("4");
+        }
         sure = "success";
       //}
       return sure;
@@ -235,19 +202,6 @@ public class DB implements ServletRequestAware{
   public ResultSet selecturl(HttpServletRequest request,String userName,String url)  
   {
     try{
-      String sql = "select * from mail where mail='"+userName+"'"+" and url='"+url+"'";
-      st = getStatement();
-      return st.executeQuery(sql);
-    }catch(Exception e){
-      e.printStackTrace();
-      return null;
-    }
-  }
-  
-  public ResultSet selectstate(HttpServletRequest request,String userName,String url)  
-  {
-    try{
-      
       String sql = "select * from mail where mail='"+userName+"'"+" and url='"+url+"'";
       st = getStatement();
       return st.executeQuery(sql);
