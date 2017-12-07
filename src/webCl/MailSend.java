@@ -27,7 +27,11 @@ public class MailSend {
     public static String myEmailSMTPHost = "smtp.163.com";
 
     // 收件人邮箱（替换为自己知道的有效邮箱）
+<<<<<<< HEAD
     public static String receiveMailAccount = "648923307@qq.com";
+=======
+    public static String receiveMailAccount = "2819963552@qq.com";
+>>>>>>> HHk
     
     public void setEml(String[] args) throws Exception {
         // 1. 创建一封邮件
@@ -73,7 +77,10 @@ public class MailSend {
         out.close();
     }
     public static void sendMail(String receiveAdd, String ctt) throws Exception {
+<<<<<<< HEAD
       
+=======
+>>>>>>> HHk
     	Properties props = new Properties();                    // 参数配置
         props.setProperty("mail.transport.protocol", "smtp");   // 使用的协议（JavaMail规范要求）
         props.setProperty("mail.smtp.host", myEmailSMTPHost);   // 发件人的邮箱的 SMTP 服务器地址
