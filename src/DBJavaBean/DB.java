@@ -1,6 +1,6 @@
 package DBJavaBean;
 
-
+//
 import java.sql.*;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
