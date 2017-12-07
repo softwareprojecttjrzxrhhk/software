@@ -221,9 +221,10 @@
 												<tr>
 													<th> Personal Url</th>
 													<th> Tag</th>
+													
+													<th> Status</th>
 													<th> Domain</th>
 													<th> Delete</th>
-													<th> Status</th>
 													
 												</tr>
 											</thead>
@@ -234,10 +235,12 @@
 												
 												<th><s:property value="#u.url"/></th>
 												<th><s:property value="#u.tag"/></th>
-												<th><a href='<s:url action="updatehref"><s:param name="email" value='email' /><s:param name="url" value='#u.url' /></s:url>'>修改</a></th> 
-												<th><a href='<s:url action="deleteurl"><s:param name="email" value='email' /><s:param name="url" value='#u.url' /></s:url>'>删除</a></th>
-												<th><s:property value="#u.state"/></th>
 												
+												<th><a href='<s:url action="updatestate"><s:param name="email" value='email' /><s:param name="state" value='#u.state' /><s:param name="url" value='#u.url' /></s:url>'><font color=red><s:property value="#u.state"/></font></a>
+												
+												</th>
+												<th><a href='<s:url action="updatehref"><s:param name="email" value='email' /><s:param name="state" value='#u.state' /><s:param name="url" value='#u.url' /></s:url>'>修改</a></th> 
+												<th><a href='<s:url action="deleteurl"><s:param name="email" value='email' /><s:param name="url" value='#u.url' /></s:url>'>删除</a></th>
 												</tr>
 												</s:iterator>
 									 		
@@ -256,5 +259,54 @@
 				</article>
 				</div>
 			<!-- END MAIN CONTENT -->
+			<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+			}
+		</script>
+
+		
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		
+		<script type="text/javascript">
+		
+		// DO NOT REMOVE : GLOBAL FUNCTIONS!
+		
+		$(document).ready(function() {
+			
+			pageSetUp();
+					
+		})
+
+		</script>
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+				_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
 </body>
 </html>
