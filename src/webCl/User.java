@@ -25,7 +25,7 @@ public class User {
 			while (rs.next()) {
 				cttFromSql = rs.getString("contt");
 			}
-			rs.close(); 
+			rs.close();
 			conn.close(); 
 		}
 		catch(SQLException e) {
@@ -34,6 +34,6 @@ public class User {
 		if (cttFromSql.equals("")) {
 			cttFromSql = "^there isn't any new message in this url";
 		}
-		ctt.append(url + "\r\n" + cttFromSql + "\r\n------------end this url------------\r\n");
+		ctt.append(url + "<br/>" + cttFromSql + "\r\n------------end this url------------\r\n");
 	}
 }

@@ -2,20 +2,14 @@ package DBJavaBean;
 
 
 import java.sql.*;
-import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import javax.swing.JOptionPane;
 import org.apache.struts2.interceptor.ServletRequestAware;
-
-import JavaBean.MyMessBean;
-import JavaBean.UserNameBean;
 
 //import JavaBean.MyDayBean;
 
 public class DB implements ServletRequestAware{
   private String driverName="com.mysql.jdbc.Driver";
-  private String url = "jdbc:mysql://127.0.0.1:3306/urlsdb";//?useUnicode=true&characterEncoding=gbk
+  private String url = "jdbc:mysql://127.0.0.1:3306/urlsdb?useSSL=true";//?useUnicode=true&characterEncoding=gbk
   private String user ="root";
   //private String password="tjr19970907";
   private String password = "1234";
@@ -123,20 +117,12 @@ public class DB implements ServletRequestAware{
   
   public String updateurl1(HttpServletRequest request,String email,String UrlName,String urlcode,String rowid,String oldurl,String state)
   {
-      
     try{
       String sure = null;
-      //rs = selecturl(request,email,oldurl);
-      //if(rs.next())
-      //{
-        //已经有一个了
-        //sure = "one";
-      //}
-      //else{
         String sql1 ="update mail SET mail='"+email+"', tag='"+UrlName+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
         st = getStatement();
         int row1=st.executeUpdate(sql1);
-        if(state.equals("close"))
+        if(state == null || state.equals("close"))
         {
           
         }
@@ -144,15 +130,26 @@ public class DB implements ServletRequestAware{
         {
           String sql2 ="update mails SET mail='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
           st = getStatement();
-          int row2=st.executeUpdate(sql1);
+          int row2=st.executeUpdate(sql2);
         }
+        /*
+        if (!urlcode.equals(oldurl)) {
+        	System.out.println("the same");
+        	String sql3 = "DELETE FROM `urlsdb`.`mails` WHERE `mails`='" + email + "' and url = '" + oldurl + "'";
+
+        	String sql2 ="update mails SET mail='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
+            st = getStatement();
+            System.out.println(rowid);
+            int row2=st.executeUpdate(sql2);
+            st.executeUpdate(sql3);
+        }
+        */
         sure = "success";
-      //}
       return sure;
     }catch(Exception e){
       e.printStackTrace();
       return null;
-          }
+  }
               
   }
   public String updateurl(HttpServletRequest request,String email,String urlcode,String state,String tag)

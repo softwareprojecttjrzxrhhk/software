@@ -8,6 +8,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Main {
+	public static String BehindMethod() {
+		System.out.println("behind");
+		return "ok";
+	}
 	public static void textWrite(final String fileName, final String cont) {
 		try {
 			File fileText = new File(fileName);
@@ -117,20 +121,4 @@ public class Main {
 	    System.out.println("main finish");
   }
 }
-//class Task extends TimerTask {
-//
-//  @Override
-//  public void run() {
-//    //System.out.println("dddd");
-//    try {
-//      MailSend.sendMail("648923307@qq.com", "aa");
-//    } catch (Exception e) {
-//      // TODO Auto-generated catch block
-//      e.printStackTrace();
-//    }
-//
-//
-//  }
-//}
-
 

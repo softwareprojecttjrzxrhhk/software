@@ -21,6 +21,17 @@ public class BaiduTieba {
 	BaiduTieba(String id) {
 		this.id = id;
 	}
+	private String baiduTieba_getTitle() {
+		String str = "Title:<br/>";
+		String html = htmlS(id, 1);
+		Pattern p = Pattern.compile("<h3.*?>(.*?)</h3>");
+        Matcher m = p.matcher(html);
+        if (m.find()) {
+        	str += m.group(1);
+        }
+        System.out.println(str);
+		return str + "<br/>";
+	}
 	public void saveCtt() {
 		String sql = "select * from urlsdb.urls where url = " + "'https://tieba.baidu.com/p/" + id + "'";
 		Connection conn = SqlCon.con();
@@ -36,7 +47,7 @@ public class BaiduTieba {
 				floor = Integer.parseInt(spt[1]);
 			}
 			rs.close();
-			conn.close(); 
+			conn.close();
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
@@ -50,7 +61,8 @@ public class BaiduTieba {
 		System.out.println(page + " " + floor);
 		///
 		conn = SqlCon.con();
-		String svCtt = Main.filterUtf8mb4(ctt.toString());
+		String tile_cont = baiduTieba_getTitle();
+		String svCtt = Main.filterUtf8mb4(tile_cont + ctt.toString());
 		Main.textWrite("wr54.txt", svCtt);
 		String svUrl = "https://tieba.baidu.com/p/" + id;
 		String svCur = page + "," + floor;
@@ -100,7 +112,7 @@ public class BaiduTieba {
         }
         while (m.find()) {
         	if (hasBegin) {
-        		ctt.append(m.group(1) + "  " + m.group(2) + "  " +  m.group(3) + "<br/>\r\n");
+        		ctt.append("<hr>" + m.group(1) + "<br/>--              ---  " + m.group(2) + "¥  " +  m.group(3) + "   ---<br/>\r\n");
         		this.floor = Integer.parseInt(m.group(2));
         	}
         	if (Integer.parseInt(m.group(2)) == floor) {

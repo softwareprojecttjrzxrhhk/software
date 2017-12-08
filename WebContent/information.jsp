@@ -214,38 +214,55 @@
 
 									<!-- widget content -->
 									<div class="widget-body no-padding" overflow="auto">
-
-										<table class="table table-bordered">
-										 
-											<thead>
+										<table class="table table-bordered" id="main_info_table">
+	
+											<thead >
 												<tr>
 													<th> Personal Url</th>
 													<th> Tag</th>
-													
 													<th> Status</th>
+													<th></th>
 													<th> Domain</th>
 													<th> Delete</th>
-													
 												</tr>
 											</thead>
 											
 											
-												<s:iterator value="listName" id="u" >
-												<tr>
-												
-												<th><s:property value="#u.url"/></th>
-												<th><s:property value="#u.tag"/></th>
-												
-												<th><a href='<s:url action="updatestate"><s:param name="email" value='email' /><s:param name="state" value='#u.state' /><s:param name="url" value='#u.url' /></s:url>'><font color=red><s:property value="#u.state"/></font></a>
-												
-												</th>
-												<th><a href='<s:url action="updatehref"><s:param name="email" value='email' /><s:param name="state" value='#u.state' /><s:param name="url" value='#u.url' /></s:url>'>修改</a></th> 
-												<th><a href='<s:url action="deleteurl"><s:param name="email" value='email' /><s:param name="url" value='#u.url' /></s:url>'>删除</a></th>
-												</tr>
-												</s:iterator>
-									 		
-											
-										</table>
+	<s:iterator value="listName" id="u" >
+	<tr>
+	
+	<th><s:property value="#u.url"/></th>
+	<th><s:property value="#u.tag"/></th>
+	
+	<th><s:property value="#u.state" /></th>
+	
+	<th>
+	<a href='<s:url action="updatestate">
+			<s:param name="email" value='email' />
+			<s:param name="state" value='#u.state' />
+			<s:param name="url" value='#u.url' /></s:url>'> 
+		<font color=green>change state</font></a>
+	</th>
+	
+	<th><a href='<s:url action="updatehref"><s:param name="email" value='email' /><s:param name="state" value='#u.state' /><s:param name="url" value='#u.url' /></s:url>'>修改</a></th> 
+	<th><a href='<s:url action="deleteurl"><s:param name="email" value='email' /><s:param name="url" value='#u.url' /></s:url>'>删除</a></th>
+	</tr>
+	</s:iterator>
+</table>
+<script type="text/javascript">
+	var tab = document.getElementById('main_info_table');
+	var rows_n = tab.rows.length;
+	for (var i = 1; i < rows_n; i++) {
+		var vlue = tab.rows[i].cells[2];
+		if (vlue.innerHTML == "close") {
+			vlue.style.color = "red";
+		}
+		else {
+			vlue.style.color = "pink";
+		}
+		//console.log("qqq", tab.rows[i].cells[3]);
+	}
+</script>
 										
 										
 									</div>
@@ -284,11 +301,11 @@
 		
 		// DO NOT REMOVE : GLOBAL FUNCTIONS!
 		
-		$(document).ready(function() {
+		//$(document).ready(function() {
 			
-			pageSetUp();
+			//pageSetUp();
 					
-		})
+	//	})
 
 		</script>
 
