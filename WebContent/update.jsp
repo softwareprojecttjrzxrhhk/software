@@ -250,6 +250,7 @@
 											<!--  <input name="checkbox_toggle" type="hidden" value="<s:property value="#u.checkbox_toggle"/>" />  -->
 											<input name="oldurl" type="hidden" value="<s:property value="#u.url"/>" />
 											<input name="oldstate" type="hidden" value="<s:property value="#u.state"/>" />
+											<input name="oldtag" type="hidden" value="<s:property value="#u.tag"/>" />
 											<fieldset>										
 											<!--  	<section>
 													<label class="label">New Book Number</label>
@@ -330,9 +331,6 @@
 			}
 		</script>
 
-
-		<!-- Demo purpose only -->
-		<script src="js/demo.js"></script>
 
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.js"></script>

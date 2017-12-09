@@ -254,10 +254,6 @@
 			}
 		</script>
 
-
-		<!-- Demo purpose only -->
-		<script src="js/demo.js"></script>
-
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.js"></script>
 
