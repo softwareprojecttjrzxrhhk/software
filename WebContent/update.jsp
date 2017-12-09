@@ -250,6 +250,7 @@
 											<!--  <input name="checkbox_toggle" type="hidden" value="<s:property value="#u.checkbox_toggle"/>" />  -->
 											<input name="oldurl" type="hidden" value="<s:property value="#u.url"/>" />
 											<input name="oldstate" type="hidden" value="<s:property value="#u.state"/>" />
+											<input name="oldtag" type="hidden" value="<s:property value="#u.tag"/>" />
 											<fieldset>										
 											<!--  	<section>
 													<label class="label">New Book Number</label>
@@ -312,8 +313,6 @@
 			</div>
 	
 			<!-- End main Panel -->
-					<!--================================================== -->
-
 		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
 		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
 
@@ -332,9 +331,6 @@
 			}
 		</script>
 
-
-		<!-- Demo purpose only -->
-		<script src="js/demo.js"></script>
 
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.js"></script>

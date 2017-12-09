@@ -115,11 +115,11 @@ public class DB implements ServletRequestAware{
               
   }
   
-  public String updateurl1(HttpServletRequest request,String email,String UrlName,String urlcode,String rowid,String oldurl,String state)
+  public String updateurl1(HttpServletRequest request,String email,String UrlName,String urlcode,String rowid,String oldurl,String state,String oldtag)
   {
     try{
       String sure = null;
-        String sql1 ="update mail SET mail='"+email+"', tag='"+UrlName+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
+        String sql1 ="update mail SET mail='"+email+"', tag='"+UrlName+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"' and tag='"+oldtag+"'";
         st = getStatement();
         int row1=st.executeUpdate(sql1);
         if(state == null || state.equals("close"))
@@ -128,7 +128,7 @@ public class DB implements ServletRequestAware{
         }
         else
         {
-          String sql2 ="update mails SET mail='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mail='"+email+"' and url='"+oldurl+"'";
+          String sql2 ="update mails SET mails='"+email+"', url='"+urlcode+"', rowid='"+rowid+"' where mails='"+email+"' and url='"+oldurl+"'";
           st = getStatement();
           int row2=st.executeUpdate(sql2);
         }

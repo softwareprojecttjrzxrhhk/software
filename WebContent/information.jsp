@@ -216,7 +216,7 @@
 									<div class="widget-body no-padding" overflow="auto">
 										<table class="table table-bordered" id="main_info_table">
 	
-											<thead >
+											<thead>
 												<tr>
 													<th> Personal Url</th>
 													<th> Tag</th>
@@ -296,9 +296,6 @@
 			}
 		</script>
 
-
-		<!-- Demo purpose only -->
-		<script src="js/demo.js"></script>
 
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.js"></script>

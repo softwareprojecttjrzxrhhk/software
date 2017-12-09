@@ -20,6 +20,7 @@ public class updateurlAction {
     private String url;
     private String checkbox_toggle;
     private String start_interval;
+    private String oldtag;
     public ResultSet result5;
     public HttpServletRequest request;
     DB Mysql = new DB();
@@ -47,7 +48,9 @@ public class updateurlAction {
     public String uphref()
     {
       String sure = null;
+      System.out.println("7");
       result5 = Mysql.selectupdate(request,email,url);
+      System.out.println("8");
       sure = myMessage(request,email,url);
       return sure;
     }
@@ -100,7 +103,7 @@ public class updateurlAction {
       rowid = email+urlcode+UrlName; 
       //oldstate;
       
-      sure = Mysql.updateurl1(request,email,UrlName,urlcode,rowid,oldurl,oldstate);
+      sure = Mysql.updateurl1(request,email,UrlName,urlcode,rowid,oldurl,oldstate,oldtag);
       
       return sure;
     }
@@ -194,5 +197,11 @@ public class updateurlAction {
     }
     public void setStart_interval(String start_interval) {
       this.start_interval = start_interval;
+    }
+    public String getOldtag() {
+      return oldtag;
+    }
+    public void setOldtag(String oldtag) {
+      this.oldtag = oldtag;
     }
 }
