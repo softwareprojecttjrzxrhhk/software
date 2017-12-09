@@ -72,7 +72,7 @@
 						<div class="hero">
 
 							<div class="pull-left login-desc-box-l">
-								<h4 class="paragraph-header">It's Okay to be Smart. Experience the simplicity of SmartAdmin, everywhere you go!</h4>
+								<h4 class="paragraph-header">It's Okay to be begin. Experience it, everywhere you go!</h4>
 								
 							</div>
 							
@@ -82,15 +82,15 @@
 
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-								<h5 class="about-heading">About SmartAdmin - Are you up to date?</h5>
+								<h5 class="about-heading">About Website - Are you up to date?</h5>
 								<p>
-									Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+									Use your email you can get an experience!
 								</p>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<h5 class="about-heading">Not just your average template!</h5>
 								<p>
-									Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi voluptatem accusantium!
+									Input the useable url and you get information from your email on time!
 								</p>
 							</div>
 						</div>
@@ -150,17 +150,24 @@
 
 						</div>
 						<p class="note text-center">Online in October 2017.</p>
-						<h5 class="text-center">- Or sign in using -</h5>
+						<h5 class="text-center">- Please Contact us -</h5>
 						<ul class="list-inline text-center">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-circle"><i class="fa fa-facebook"></i></a>
+								<h5>Tianjunrui 22825504682qq.com</h5>
 							</li>
+						</ul>
+						<ul class="list-inline text-center">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-info btn-circle"><i class="fa fa-twitter"></i></a>
+								<h5> Huanghekai </h5>
 							</li>
+						</ul>
+						<ul class="list-inline text-center">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-warning btn-circle"><i class="fa fa-linkedin"></i></a>
+								<h5> Zhangxiran</h5>
 							</li>
+						</ul>
+							
+							
 						</ul>
 					</div>
 				</div>
@@ -247,7 +254,7 @@
 
             <h2>No warranties</h2>
 
-            <p>This website is provided “as is” without any representations or warranties, express or implied.  [NAME] makes no representations or warranties in relation to this website or the information and materials provided on this website.</p>
+            <p>This website is provided âas isâ without any representations or warranties, express or implied.  [NAME] makes no representations or warranties in relation to this website or the information and materials provided on this website.</p>
 
             <p>Without prejudice to the generality of the foregoing paragraph, [NAME] does not warrant that:</p>
             <ul>
@@ -394,7 +401,7 @@ Contractology supply a wide variety of commercial legal documents, such as <a hr
 
 		
 			
-			<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+			
 			
 		<![endif]-->
 		

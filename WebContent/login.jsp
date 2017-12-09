@@ -75,13 +75,13 @@
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<h5 class="about-heading">About System - Are you up to date?</h5>
 								<p>
-									When the user clicks on the title of a book, show the book details and the author details;
+									This is a website that can help you get new information and update it!
 								</p>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<h5 class="about-heading">You can try it !</h5>
 								<p>
-									Enter the author's name and query the title of the author's book
+									Input your url address and try it!
 								</p>
 							</div>
 						</div>

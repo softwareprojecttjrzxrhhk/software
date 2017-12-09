@@ -312,7 +312,7 @@
 			</div>
 	
 			<!-- End main Panel -->
-			<!--================================================== -->
+					<!--================================================== -->
 
 		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
 		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
@@ -333,11 +333,14 @@
 		</script>
 
 
-		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+		<!-- Demo purpose only -->
+		<script src="js/demo.js"></script>
 
-		<![endif]-->
+		<!-- MAIN APP JS FILE -->
+		<script src="js/app.js"></script>
 
-		
+		<!-- PAGE RELATED PLUGIN(S) 
+		<script src="..."></script>-->
 
 		
 
@@ -348,11 +351,6 @@
 		$(document).ready(function() {
 			
 			pageSetUp();
-			
-			
-	
-			
-		
 		
 		})
 
@@ -374,5 +372,6 @@
 			})();
 
 		</script>
+
 </body>
 </html>
