@@ -312,8 +312,6 @@
 			</div>
 	
 			<!-- End main Panel -->
-					<!--================================================== -->
-
 		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
 		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
 

@@ -216,7 +216,7 @@
 									<div class="widget-body no-padding" overflow="auto">
 										<table class="table table-bordered" id="main_info_table">
 	
-											<thead >
+											<thead>
 												<tr>
 													<th> Personal Url</th>
 													<th> Tag</th>
