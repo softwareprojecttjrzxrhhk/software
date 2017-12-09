@@ -276,7 +276,7 @@
 				</article>
 				</div>
 			<!-- END MAIN CONTENT -->
-			<!--================================================== -->
+					<!--================================================== -->
 
 		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
 		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
@@ -296,16 +296,27 @@
 			}
 		</script>
 
+
+		<!-- Demo purpose only -->
+		<script src="js/demo.js"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="js/app.js"></script>
+
+		<!-- PAGE RELATED PLUGIN(S) 
+		<script src="..."></script>-->
+
 		
+
 		<script type="text/javascript">
 		
 		// DO NOT REMOVE : GLOBAL FUNCTIONS!
 		
-		//$(document).ready(function() {
+		$(document).ready(function() {
 			
-			//pageSetUp();
-					
-	//	})
+			pageSetUp();
+		
+		})
 
 		</script>
 
@@ -325,5 +336,6 @@
 			})();
 
 		</script>
+
 </body>
 </html>

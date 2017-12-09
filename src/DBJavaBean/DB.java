@@ -11,8 +11,8 @@ public class DB implements ServletRequestAware{
   private String driverName="com.mysql.jdbc.Driver";
   private String url = "jdbc:mysql://127.0.0.1:3306/urlsdb?useSSL=true";//?useUnicode=true&characterEncoding=gbk
   private String user ="root";
-  //private String password="tjr19970907";
-  private String password = "1234";
+  private String password="tjr19970907";
+  //private String password = "1234";
   private Connection con = null;
   private Statement st =null;
   private ResultSet rs = null;

@@ -98,9 +98,9 @@ public class updateurlAction {
     {
       String sure = null;
       rowid = email+urlcode+UrlName; 
+      //oldstate;
       
-      
-      sure = Mysql.updateurl1(request,email,UrlName,urlcode,rowid,oldurl,state);
+      sure = Mysql.updateurl1(request,email,UrlName,urlcode,rowid,oldurl,oldstate);
       
       return sure;
     }
