@@ -60,9 +60,6 @@
 				<span id="logo"> <img src="img/url.jpg" alt="SmartAdmin"> </span>
 				<!-- END LOGO PLACEHOLDER -->
 				<!-- span id="logo"> <img src="img/logo.png" alt="SmartAdmin"> </span> -->
-				
-															
-						
 				<!-- END LOGO PLACEHOLDER -->
 
 				<!-- Note: The activity badge color changes when clicked and resets the number to 0
@@ -95,13 +92,7 @@
 				<!-- END AJAX-DROPDOWN -->
 			</div>
 
-						<ul>
-							<li>
-								<h5>Tianjunrui 2282550468@qq.com Huanghekai 2819963552@qq.com Zhangxiran 648923307@qq.com</h5>
-							
-							</li>
-						</ul>
-						
+
 			<!-- pulled right: nav area -->
 			<div class="pull-right">
 

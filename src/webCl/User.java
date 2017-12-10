@@ -13,7 +13,10 @@ public class User {
 		ctt = new StringBuffer();
 	}
 	public void send() throws Exception {
-		MailSend.sendMail(addr, ctt.toString());
+		
+		MailSend a = new MailSend();
+		
+		a.sendMail(addr, ctt.toString());
 	}
 	public void addCtt(String url) {
 		String sql = "SELECT * FROM urlsdb.urls where url = '" + url + "'";

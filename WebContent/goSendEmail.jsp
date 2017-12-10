@@ -3,6 +3,7 @@
     
     
 <%@page import="webCl.Main"%>
+<%@page import="webCl.MailSend"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,9 +12,9 @@
 </head>
 <body>
 
-<script type="text/javascript">  
+<script type="text/javascript"> 
 var methodStr = "<%=webCl.Main.BehindMethod()%>";  
-//alert(methodStr);  
+alert(methodStr);  
 </script>  
 </body>
 </html>

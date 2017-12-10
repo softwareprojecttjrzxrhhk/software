@@ -69,7 +69,6 @@ public class WebC {
                 httpUrlConn.disconnect();  
             }
         }
-        System.out.println("httpRequsetFinish");
         return buffer.toString();  
     }  
 }

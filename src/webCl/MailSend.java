@@ -9,11 +9,6 @@ import java.io.OutputStream;
 import java.util.Date;
 import java.util.Properties;
 
-/**
- * JavaMail 版本: 1.6.0
- * JDK 版本: JDK 1.7 以上（必须）
- */
-
 public class MailSend {
 
     // 发件人的 邮箱 和 密码（替换为自己的邮箱和密码）

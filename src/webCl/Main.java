@@ -4,13 +4,12 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Main {
 	public static String BehindMethod() {
 		System.out.println("behind");
-		return "ok";
+		String re = myGo();
+		return re;
 	}
 	public static void textWrite(final String fileName, final String cont) {
 		try {
@@ -54,10 +53,13 @@ public class Main {
 		}
 		
 	}
-	public static void crawlWeb() {
+	public static String crawlWeb() {
 		String sql = "select * from urlsdb.mails order by url";
 		Connection conn = SqlCon.con();
 		try {
+			if (conn == null) {
+				return "error";
+			}
 			Statement statement = conn.createStatement();
 			ResultSet rs = statement.executeQuery(sql);  
 			String lastUrl = "xx";
@@ -75,6 +77,7 @@ public class Main {
 		catch(SQLException e) {
 			e.printStackTrace();
 		}
+		return "su";
 	}
 	public static void sendMail() {
 		String sql = "select * from urlsdb.mails order by mails";
@@ -108,16 +111,16 @@ public class Main {
 			e.printStackTrace();
 		}
 	}
-	public static void myGo() {
-		crawlWeb();
+	public static String myGo() {
+		String s_crawWeb = crawlWeb();
+		if (s_crawWeb.equals("error")) {
+			return "error";
+		}
 		sendMail();
+		return "su";
 	}
 	public static void main(String[] args) {
-	    //Timer time=new Timer();
-	    //
 	    myGo();
-	    //time.scheduleAtFixedRate(new Task(), 0, 5000);
-	
 	    System.out.println("main finish");
   }
 }

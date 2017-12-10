@@ -5,11 +5,19 @@ import java.sql.*;
 public class SqlCon {//
 	private static String driver = "com.mysql.jdbc.Driver";
 	private static String user = "root";
-	private static String url = "jdbc:mysql://localhost:3306/bookdb?useSSL=true";
-	private static String password = "1234";
-	//sina 
-	//private static String password = "123456";
-	//private static String url = "jdbc:mysql://jackerpjhjcl.mysql.sae.sina.com.cn:10624/bookdb";
+	
+	//private static String url = "jdbc:mysql://localhost:3306/bookdb?useSSL=true";
+	//private static String password = "1234";
+	
+	
+	/* 
+	 * in principle, these source codes that refer to the url and password to SQL server on sina
+	 * should not just be commented but be deleted !!  
+	 */
+	//sina
+	private static String url = "jdbc:mysql://fmpemtltjykv.mysql.sae.sina.com.cn:10319/urlsdb";
+	private static String password = "123456";
+	
 	public static Connection con() {
 		try {
 			Class.forName(driver);

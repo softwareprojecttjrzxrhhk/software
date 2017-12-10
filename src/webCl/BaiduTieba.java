@@ -29,7 +29,7 @@ public class BaiduTieba {
         if (m.find()) {
         	str += m.group(1);
         }
-        System.out.println(str);
+        //System.out.println(str);
 		return str + "<br/>";
 	}
 	public void saveCtt() {
@@ -58,12 +58,12 @@ public class BaiduTieba {
 		}
 		///
 		calCtt(page);
-		System.out.println(page + " " + floor);
+		//System.out.println(page + " " + floor);
 		///
 		conn = SqlCon.con();
 		String tile_cont = baiduTieba_getTitle();
 		String svCtt = Main.filterUtf8mb4(tile_cont + ctt.toString());
-		Main.textWrite("wr54.txt", svCtt);
+		//Main.textWrite("wr54.txt", svCtt);
 		String svUrl = "https://tieba.baidu.com/p/" + id;
 		String svCur = page + "," + floor;
 		try {
@@ -97,9 +97,9 @@ public class BaiduTieba {
 	}
 	public void calCtt(int page) {
 		//this function will change the floor and page, so it can be called at most once
-		System.out.println("calCtt begin");
+		//System.out.println("calCtt begin");
 		String html = htmlS(id, page);
-		Main.textWrite("html.txt", html);
+		//Main.textWrite("html.txt", html);
 		boolean hasBegin = true;
 		if (page <= this.page) {
 			hasBegin = false;
@@ -128,13 +128,13 @@ public class BaiduTieba {
         } else {
         	this.page = page;
         }
-        System.out.println("calCtt end");
+        //System.out.println("calCtt end");
 	}
 	public void showUpgr(String id, int page, int floor) {
 		this.id = id;
 		this.page = page;
 		this.floor = floor;
 		calCtt(page);
-		System.out.println(ctt.toString());
+		//System.out.println(ctt.toString());
 	}
 }
