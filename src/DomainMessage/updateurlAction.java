@@ -48,7 +48,9 @@ public class updateurlAction {
     public String uphref()
     {
       String sure = null;
+      System.out.println("7");
       result5 = Mysql.selectupdate(request,email,url);
+      System.out.println("8");
       sure = myMessage(request,email,url);
       return sure;
     }

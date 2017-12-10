@@ -150,16 +150,22 @@
 
 						</div>
 						<p class="note text-center">Online in October 2017.</p>
-						<h5 class="text-center">- Or sign in using -</h5>
+						
+						<h5 class="text-center"> - Or sign in using -</h5>
+															
+										<ul class="list-inline text-center">
+							<li>
+								<h5>Tianjunrui 2282550468@qq.com</h5>
+							</li>
+						</ul>
 						<ul class="list-inline text-center">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-circle"><i class="fa fa-facebook"></i></a>
+								<h5> Huanghekai 2819963552@qq.com</h5>
 							</li>
+						</ul>
+						<ul class="list-inline text-center">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-info btn-circle"><i class="fa fa-twitter"></i></a>
-							</li>
-							<li>
-								<a href="javascript:void(0);" class="btn btn-warning btn-circle"><i class="fa fa-linkedin"></i></a>
+								<h5> Zhangxiran 648923307@qq.com</h5>
 							</li>
 						</ul>
 					</div>

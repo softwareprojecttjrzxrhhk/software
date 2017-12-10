@@ -5,22 +5,29 @@ import java.sql.*;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.interceptor.ServletRequestAware;
 
+
 public class DB implements ServletRequestAware{
-  private String driverName="com.mysql.jdbc.Driver";
-  private String user ="root";
-  
-  ///private String url = "jdbc:mysql://127.0.0.1:3306/urlsdb?useSSL=true";//?useUnicode=true&characterEncoding=gbk
-  //private String url = "jdbc:mysql://localhost:3306/urlsdb?useSSL=true";
-  //private String password="tjr19970907";
-  //private String password = "1234";
-  
-  // sina
-  private String url = "jdbc:mysql://fmpemtltjykv.mysql.sae.sina.com.cn:10319/urlsdb";
-  private String password = "123456";
-  private Connection con = null;
-  private Statement st =null;
-  private ResultSet rs = null;
-  private HttpServletRequest request;
+	private String driverName="com.mysql.jdbc.Driver";
+	  private String user ="root";
+	  
+	  ///private String url = "jdbc:mysql://127.0.0.1:3306/urlsdb?useSSL=true";
+	  //private String password="tjr19970907";
+	  
+		
+	  private static String url = "jdbc:mysql://localhost:3306/urlsdb?useSSL=true";
+	private static String password = "1234";
+		/* 
+		 * in principle, these source codes that refer to the url and password to SQL server on sina
+		 * should not just be commented but be deleted !!  
+		 */
+		//sina
+	//	private static String url = "jdbc:mysql://fmpemtltjykv.mysql.sae.sina.com.cn:10319/urlsdb";
+		//private static String password = "123456";
+		
+		private Connection con = null;
+		  private Statement st =null;
+		  private ResultSet rs = null;
+		  private HttpServletRequest request;
   
   public DB(){
     
@@ -175,6 +182,7 @@ public class DB implements ServletRequestAware{
      String rowid = email+urlcode+tag;   
         if(state.equals("open"))
         {
+          System.out.println("2");
           String sql1 ="update mail SET state='close' where mail='"+email+"' and url='"+urlcode+"'";
           st = getStatement();
           int row1=st.executeUpdate(sql1);
@@ -185,6 +193,7 @@ public class DB implements ServletRequestAware{
         }
         else
         {
+          System.out.println("3");
           String sql1 ="update mail SET state='open' where mail='"+email+"' and url='"+urlcode+"'";
           st = getStatement();
           int row1=st.executeUpdate(sql1);
