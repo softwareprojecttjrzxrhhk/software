@@ -51,6 +51,11 @@ public class Main {
 			BaiduTieba aaa = new BaiduTieba(ana[2]);
 			aaa.saveCtt();
 		}
+		if (ana[0].equals("bbs.csdn.net")) {
+      System.out.println(ana[1]);
+      CSDN aaa = new CSDN(ana[2]);
+      aaa.saveCtt();
+    }
 		
 	}
 	public static String crawlWeb() {
