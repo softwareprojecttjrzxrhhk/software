@@ -6,8 +6,8 @@ public class SqlCon {
 	private static String driver = "com.mysql.jdbc.Driver";
 	private static String user = "root";
 	
-	private static String url = "jdbc:mysql://localhost:3306/urlsdb?useSSL=true";
-	private static String password = "1234";
+	//private static String url = "jdbc:mysql://localhost:3306/urlsdb?useSSL=true";
+	//private static String password = "1234";
 	
 	
 	/* 
@@ -15,8 +15,8 @@ public class SqlCon {
 	 * should not just be commented but be deleted !!  
 	 */
 	//sina
-	//private static String url = "jdbc:mysql://fmpemtltjykv.mysql.sae.sina.com.cn:10319/urlsdb";
-	//private static String password = "123456";
+	private static String url = "jdbc:mysql://fmpemtltjykv.mysql.sae.sina.com.cn:10319/urlsdb";
+	private static String password = "123456";
 	
 	public static Connection con() {
 		try {

@@ -133,7 +133,9 @@ public class Main {
 	}
 	public static void main(String[] args) {
 	   // crawlWeb();
-		myGo();
+		//myGo();
+		CSDN aaa = new CSDN("392018486");
+		System.out.println(aaa.CSDN_getTitle());
 	    System.out.println("main finish");
   }
 }
