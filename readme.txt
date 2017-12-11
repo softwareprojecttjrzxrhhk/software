@@ -1,3 +1,3 @@
 This is a project just for SE course. 
 
-conclude Sun.
+conclude Sun. master
