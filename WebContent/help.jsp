@@ -221,20 +221,20 @@
 								<h2>If you want to use this product, you can follow these steps</h2>
 								<h2>1.Register</h2>
 								<h3>When you access our website, you can see a button has "CREATE AN ACCOUNT" on it. Just click that button. After that, the web will turn to register page, what you need to do is filling in your email and set your password.</h3>
-									<img src="img/help/creatcnt.png" alt="SmartAdmin">
+									<img src="img/help/creatcnt.png" alt="SmartAdmin"  width="600" height="300">
 								<h3>After pressing the button, the web will turn to register page, what you need to do is filling in your email and set your password.</h3>
 								<h2>After verifying your accout or login, you will turn to the home page</h2>
-									<img src="img/help/home.png" alt="SmartAdmin">
+									<img src="img/help/home.png" alt="SmartAdmin" width="600" height="300">
 								<h2>All the functions are at the left side of the web</h2>
 								<h2>2.Add new URL</h2>
 								<h3>The most important thing is to add the URL. When you access this page, you have to add the URL which you are interested in and the tags which can help you manage your URLS if you add lots of URLS on our web.</h3>
-									<img src="img/help/add.jpg" alt="SmartAdmin">
+									<img src="img/help/add.jpg" alt="SmartAdmin" width="600" height="300">
 								<h2>3.View all URLS</h2>
 								<h3>If you want to check or edit the URLS you have added, just click the the "Look Information". If you want to edit or delete one of the URLS just click edit button or delete button.</h3>
-									<img src="img/help/all.jpg" alt="SmartAdmin">
+									<img src="img/help/all.jpg" alt="SmartAdmin" width="600" height="300">
 								<h2>4.Search by Urltag</h2>
 								<h3>If you want to search your URLS by tags to avoid check it one by one, just click the the "Search by URLTag" and input which kind of tag you want to search</h3>
-									<img src="img/help/tag.jpg" alt="SmartAdmin">
+									<img src="img/help/tag.jpg" alt="SmartAdmin" width="600" height="300">
 								
 								
 			
