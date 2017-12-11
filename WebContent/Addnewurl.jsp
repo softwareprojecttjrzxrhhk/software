@@ -89,6 +89,12 @@
 				<!-- END AJAX-DROPDOWN -->
 			</div>
 
+<ul>
+							<li>
+								contact us: 2282550468@qq.com / 2819963552@qq.com / 648923307@qq.com
+							<a href="help.jsp">or you just want some instruction?</a>
+							</li>
+						</ul>
 
 			<!-- pulled right: nav area -->
 			<div class="pull-right">
@@ -283,6 +289,15 @@
 								<!-- end widget div -->
 				
 							</div>
+							<div>
+							The urls you can add should be like this: (you may copy the url in your web browser)<br>
+							BaiduTieba:(eg.)  <p style="color:red;">https://tieba.baidu.com/p/5473787128</p>
+							CSDN:(eg.) <p style="color:red;">http://bbs.csdn.net/topics/392064169</p>
+							TodayHIT:(eg.)<p style="color:red;">http://today.hit.edu.cn/classList/1_27.html</p>
+							<p style="color:red;">http://today.hit.edu.cn/classList/1_9.html</p>
+							news163:(eg.)<p style="color:red;">http://news.163.com/world/</p>
+							<p style="color:red;">http://news.163.com/domestic/</p>
+							</div>
 							<!-- end widget -->
 				
 						</article>
@@ -290,7 +305,7 @@
 						<!-- END COL -->
 						</section>
 						
-			</div>
+			</div> 
 	
 			<!-- End main Panel -->
 			<!--================================================== -->
