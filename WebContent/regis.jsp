@@ -1,14 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@taglib prefix="s" uri="/struts-tags"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html>
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
 		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
-		<title> URL Management System </title>
+		<title> SmartAdmin </title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 
@@ -52,18 +48,13 @@
 			<!--<span id="logo"></span>-->
 
 			<div id="logo-group">
-				<span id="logo"> <img src="img/url.jpg" alt="SmartAdmin"> </span>
+				<span id="logo"> <img src="img/logo.png" alt="SmartAdmin"> </span>
 
 				<!-- END AJAX-DROPDOWN -->
 			</div>
 
-			<span id="login-header-space"> <span class="hidden-mobile">Already registered?</span> <a href="login.jsp" class="btn btn-danger">Sign In</a> </span>
-<ul>
-							<li>
-								contact us: 2282550468@qq.com / 2819963552@qq.com / 648923307@qq.com
-							<a href="help.jsp">or you just want some instruction?</a>
-							</li>
-						</ul>
+			<span id="login-header-space"> <span class="hidden-mobile">Already registered?</span> <a href="login.html" class="btn btn-danger">Sign In</a> </span>
+
 		</header>
 
 		<div id="main" role="main">
@@ -73,15 +64,18 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 hidden-xs hidden-sm">
-						<h1 class="txt-color-red login-header-big">register page</h1>
+						<h1 class="txt-color-red login-header-big">SmartAdmin</h1>
 						<div class="hero">
 
 							<div class="pull-left login-desc-box-l">
 								<h4 class="paragraph-header">It's Okay to be Smart. Experience the simplicity of SmartAdmin, everywhere you go!</h4>
-								
+								<div class="login-app-icons">
+									<a href="javascript:void(0);" class="btn btn-danger btn-sm">Frontend Template</a>
+									<a href="javascript:void(0);" class="btn btn-danger btn-sm">Find out more</a>
+								</div>
 							</div>
 							
-							<img src="img/urlpic.jpg" alt="" class="pull-right display-image" style="width:210px">
+							<img src="img/demo/iphoneview.png" alt="" class="pull-right display-image" style="width:210px">
 							
 						</div>
 
@@ -104,12 +98,17 @@
 					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 						<div class="well no-padding">
 
-							<form action="Register" id="smart-form-register" class="smart-form client-form">
+							<form action="php/demo-register.php" id="smart-form-register" class="smart-form client-form">
 								<header>
-									 Registration Of Our System is FREE
+									Registration is FREE*
 								</header>
-								<h1 style="color:red ">The Email has been used. Please Enter A New Email</h1>
+
 								<fieldset>
+									<section>
+										<label class="input"> <i class="icon-append fa fa-user"></i>
+											<input type="text" name="username" placeholder="Username">
+											<b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
+									</section>
 
 									<section>
 										<label class="input"> <i class="icon-append fa fa-envelope"></i>
@@ -131,9 +130,40 @@
 								</fieldset>
 
 								<fieldset>
-									
-								<section>
-										
+									<div class="row">
+										<section class="col col-6">
+											<label class="input">
+												<input type="text" name="firstname" placeholder="First name">
+											</label>
+										</section>
+										<section class="col col-6">
+											<label class="input">
+												<input type="text" name="lastname" placeholder="Last name">
+											</label>
+										</section>
+									</div>
+
+									<div class="row">
+										<section class="col col-6">
+											<label class="select">
+												<select name="gender">
+													<option value="0" selected="" disabled="">Gender</option>
+													<option value="1">Male</option>
+													<option value="2">Female</option>
+													<option value="3">Prefer not to answer</option>
+												</select> <i></i> </label>
+										</section>
+										<section class="col col-6">
+											<label class="input"> <i class="icon-append fa fa-calendar"></i>
+												<input type="text" name="request" placeholder="Request activation on" class="datepicker" data-dateformat='dd/mm/yy'>
+											</label>
+										</section>
+									</div>
+
+									<section>
+										<label class="checkbox">
+											<input type="checkbox" name="subscription" id="subscription">
+											<i></i>I want to receive news and special offers</label>
 										<label class="checkbox">
 											<input type="checkbox" name="terms" id="terms">
 											<i></i>I agree with the <a href="#" data-toggle="modal" data-target="#myModal"> Terms and Conditions </a></label>
@@ -154,23 +184,17 @@
 							</form>
 
 						</div>
-						<p class="note text-center">Online in October 2017.</p>
-						
-						<h5 class="text-center"> - Or sign in using -</h5>
-															
-										<ul class="list-inline text-center">
-							<li>
-								<h5>Tianjunrui 2282550468@qq.com</h5>
-							</li>
-						</ul>
+						<p class="note text-center">*FREE Registration ends on October 2015.</p>
+						<h5 class="text-center">- Or sign in using -</h5>
 						<ul class="list-inline text-center">
 							<li>
-								<h5> Huanghekai 2819963552@qq.com</h5>
+								<a href="javascript:void(0);" class="btn btn-primary btn-circle"><i class="fa fa-facebook"></i></a>
 							</li>
-						</ul>
-						<ul class="list-inline text-center">
 							<li>
-								<h5> Zhangxiran 648923307@qq.com</h5>
+								<a href="javascript:void(0);" class="btn btn-info btn-circle"><i class="fa fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="btn btn-warning btn-circle"><i class="fa fa-linkedin"></i></a>
 							</li>
 						</ul>
 					</div>
@@ -244,7 +268,7 @@
 
             <h2>[User content</h2>
 
-            <p>In these terms and conditions, "your user content" means material (including without limitation text, images, audio material, video material and audio-visual material) that you submit to this website, for whatever purpose.</p>
+            <p>In these terms and conditions, “your user content” means material (including without limitation text, images, audio material, video material and audio-visual material) that you submit to this website, for whatever purpose.</p>
 
             <p>You grant to [NAME] a worldwide, irrevocable, non-exclusive, royalty-free license to use, reproduce, adapt, publish, translate and distribute your user content in any existing or future media.  You also grant to [NAME] the right to sub-license these rights, and the right to bring an action for infringement of these rights.</p>
 
@@ -394,13 +418,53 @@ Contractology supply a wide variety of commercial legal documents, such as <a hr
 		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>-->
 
 	    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
-	    
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script> if (!window.jQuery) { document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');} </script>
 
-	   
+	    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<script> if (!window.jQuery.ui) { document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');} </script>
 
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events 		
+		<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+		<!-- BOOTSTRAP JS -->		
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="js/smartwidgets/jarvis.widget.min.js"></script>
 		
+		<!-- EASY PIE CHARTS -->
+		<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+		
+		<!-- SPARKLINES -->
+		<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+		
+		<!-- JQUERY VALIDATE -->
+		<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+		
+		<!-- JQUERY MASKED INPUT -->
+		<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+		
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+		
+		<!-- browser msie issue fix -->
+		<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+		
+		<!-- FastClick: For mobile devices -->
+		<script src="js/plugin/fastclick/fastclick.js"></script>
+		
+		<!--[if IE 7]>
+			
+			<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+			
+		<![endif]-->
 		
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.js"></script>

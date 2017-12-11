@@ -97,8 +97,8 @@
 
 						<ul>
 							<li>
-								<h5>Tianjunrui 2282550468@qq.com Huanghekai 2819963552@qq.com Zhangxiran 648923307@qq.com</h5>
-							
+								contact us: 2282550468@qq.com / 2819963552@qq.com / 648923307@qq.com
+							<a href="help.jsp">or you just want some instruction?</a>
 							</li>
 						</ul>
 						

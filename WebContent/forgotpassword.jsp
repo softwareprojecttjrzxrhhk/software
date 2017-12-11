@@ -52,9 +52,15 @@
 
 				<!-- END AJAX-DROPDOWN -->
 			</div>
+			
 
 			<span id="login-header-space"> <span class="hidden-mobile">Need an account?</span> <a href="register.html" class="btn btn-danger">Creat account</a> </span>
-
+<ul>
+							<li>
+								contact us: 2282550468@qq.com / 2819963552@qq.com / 648923307@qq.com
+							<a href="help.jsp">or you just want some instruction?</a>
+							</li>
+						</ul>
 		</header>
 
 		<div id="main" role="main">
@@ -129,24 +135,6 @@
 							</form>
 
 						</div>
-						
-						<h5 class="text-center"> - Or sign in using -</h5>
-															
-										<ul class="list-inline text-center">
-							<li>
-								<h5>Tianjunrui 22825504682qq.com</h5>
-							</li>
-						</ul>
-						<ul class="list-inline text-center">
-							<li>
-								<h5> Huanghekai 2819963552@qq.com</h5>
-							</li>
-						</ul>
-						<ul class="list-inline text-center">
-							<li>
-								<h5> Zhangxiran 648923307@qq.com</h5>
-							</li>
-						</ul>
 						
 					</div>
 				</div>

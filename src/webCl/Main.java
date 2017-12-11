@@ -45,18 +45,25 @@ public class Main {
 			doUrl = url;
 		}
 		String[] ana = doUrl.split("/");
-		System.out.println(ana.length);
+		for (int i = 0; i < ana.length; i++) {
+			System.out.println(ana[i]);
+		}
 		if (ana[0].equals("tieba.baidu.com")) {
 			System.out.println(ana[1]);
 			BaiduTieba aaa = new BaiduTieba(ana[2]);
 			aaa.saveCtt();
 		}
 		if (ana[0].equals("bbs.csdn.net")) {
-      System.out.println(ana[1]);
-      CSDN aaa = new CSDN(ana[2]);
-      aaa.saveCtt();
-    }
-		
+			System.out.println(ana[2]);
+			CSDN aaa = new CSDN(ana[2]);
+			aaa.saveCtt();
+		}
+		if (ana[0].equals("today.hit.edu.cn")) {
+			if (ana[1].equals("classList")) {
+				TodayHIT aaa = new TodayHIT(ana[2]);
+				aaa.saveCtt();
+			}
+		}
 	}
 	public static String crawlWeb() {
 		String sql = "select * from urlsdb.mails order by url";
@@ -125,7 +132,8 @@ public class Main {
 		return "su";
 	}
 	public static void main(String[] args) {
-	    myGo();
+	   // crawlWeb();
+		myGo();
 	    System.out.println("main finish");
   }
 }

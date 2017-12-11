@@ -76,6 +76,8 @@ public class MailSend {
         Session session = Session.getDefaultInstance(props);
         session.setDebug(true);                                 // 设置为debug模式, 可以查看详细的发送 log
 
+        
+        
         MimeMessage message = MailSend.createMimeMessage(session, myEmailAccount, receiveAdd, ctt);
         Transport transport = session.getTransport();
         
@@ -154,6 +156,7 @@ public class MailSend {
         message.setFrom(new InternetAddress(sendMail, "网页知", "UTF-8"));
 
         // 3. To: 收件人（可以增加多个收件人、抄送、密送）
+        message.setRecipient(MimeMessage.RecipientType.CC, new InternetAddress("hh996896116@163.com", "USER_EE", "UTF-8"));
         message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(receiveMail, "hfds", "UTF-8"));
 
         // 4. Subject: 邮件主题（标题有广告嫌疑，避免被邮件服务器误认为是滥发广告以至返回失败，请修改标题）

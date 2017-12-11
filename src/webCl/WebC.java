@@ -14,7 +14,7 @@ public class WebC {
      * @param requestUrl     String    请求地址
      * @return                 String    该地址返回的html字符串
      */  
-    public static String httpRequest(String requestUrl) {  
+    public static String httpRequest(String requestUrl, String charset) {  
         
         StringBuffer buffer = null;  
         BufferedReader bufferedReader = null;
@@ -31,7 +31,7 @@ public class WebC {
   
             // 获取输入流  
             inputStream = httpUrlConn.getInputStream();  
-            inputStreamReader = new InputStreamReader(inputStream, "utf-8");  
+            inputStreamReader = new InputStreamReader(inputStream, charset);  
             bufferedReader = new BufferedReader(inputStreamReader);  
   
             // 从输入流读取结果

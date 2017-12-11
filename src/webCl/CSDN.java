@@ -87,13 +87,12 @@ public class CSDN {
     //this function will change the floor and page, so it can be called at most once
     System.out.println("calCtt begin");
     String html = htmlS(id, page);
-    Main.textWrite("html.txt", html);
     boolean hasBegin = true;
     if (page <= this.page) {
       hasBegin = false;
       ctt = new StringBuffer(); 
     }
-        Pattern p = Pattern.compile("data-floor=\"(.+?)\">\\s*<div class=\"post_body\">([\\s\\S]*?)</div>\\s*回复于：(.*?)\\s*</span>");//题主问题为空层
+        Pattern p = Pattern.compile("data-floor=\"(.*?)\">.*?<div class=\"post_body\">(.*?)</div>.*?回复于：(.*?)</span>");//题主问题为空层
         Matcher m = p.matcher(html);//原 ：内容 楼书 时间
         if (floor == 1) {
           hasBegin = true;
@@ -101,6 +100,9 @@ public class CSDN {
         while (m.find()) {
           if (hasBegin) {
             ctt.append(m.group(2) + "  " + m.group(1) + "  " +  m.group(3) + "\r\n");
+            System.out.println(m.group(1));
+            System.out.println(m.group(2));
+            System.out.println(m.group(3));
             this.floor = Integer.parseInt(m.group(1));
           }
           if (Integer.parseInt(m.group(1)) == floor) {

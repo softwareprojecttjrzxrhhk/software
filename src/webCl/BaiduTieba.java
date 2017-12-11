@@ -13,6 +13,7 @@ public class BaiduTieba {
 	public int page;
 	public StringBuffer ctt;
 	public int floor;
+	private static String charset = "utf-8";
 	BaiduTieba(String id, String page, String floor) {
 		this.id = id;
 		this.page = Integer.parseInt(page);
@@ -93,7 +94,7 @@ public class BaiduTieba {
 		return ctt.toString();
 	}
 	public String htmlS(String id, int page) {
-		return WebC.httpRequest("https://tieba.baidu.com/p/" + id + "?pn=" + page);
+		return WebC.httpRequest("https://tieba.baidu.com/p/" + id + "?pn=" + page, charset);
 	}
 	public void calCtt(int page) {
 		//this function will change the floor and page, so it can be called at most once
