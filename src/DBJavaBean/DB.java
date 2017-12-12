@@ -8,21 +8,21 @@ import org.apache.struts2.interceptor.ServletRequestAware;
 
 public class DB implements ServletRequestAware{
 	private String driverName="com.mysql.jdbc.Driver";
-	  private String user ="root";
+	private String user ="root";
 	  
-	  ///private String url = "jdbc:mysql://127.0.0.1:3306/urlsdb?useSSL=true";
-	  //private String password="tjr19970907";
+	//private String url = "jdbc:mysql://127.0.0.1:3306/urlsdb?useSSL=true";
+	//private String password="tjr19970907";
 	  
 		
-	 // private static String url = "jdbc:mysql://localhost:3306/urlsdb?useSSL=true";
+	//private static String url = "jdbc:mysql://localhost:3306/urlsdb?useSSL=true";
 	//private static String password = "1234";
 		/* 
 		 * in principle, these source codes that refer to the url and password to SQL server on sina
 		 * should not just be commented but be deleted !!  
 		 */
 		//sina
-		private static String url = "jdbc:mysql://fmpemtltjykv.mysql.sae.sina.com.cn:10319/urlsdb";
-		private static String password = "123456";
+	private static String url = "jdbc:mysql://fmpemtltjykv.mysql.sae.sina.com.cn:10319/urlsdb";
+	private static String password = "123456";
 		
 		private Connection con = null;
 		  private Statement st =null;

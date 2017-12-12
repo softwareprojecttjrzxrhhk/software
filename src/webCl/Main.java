@@ -37,9 +37,9 @@ public class Main {
     }
 	public static void saveCtt(String url) {
 		String doUrl;
-		if (url.substring(0, 7).equals("http://")) {
+		if (url.length() > 7 && url.substring(0, 7).equals("http://")) {
 			doUrl = url.substring(7);
-		} else if (url.substring(0, 8).equals("https://")) {
+		} else if (url.length() > 8 && url.substring(0, 8).equals("https://")) {
 			doUrl = url.substring(8);
 		} else {
 			doUrl = url;
@@ -63,6 +63,10 @@ public class Main {
 				TodayHIT aaa = new TodayHIT(ana[2]);
 				aaa.saveCtt();
 			}
+		}
+		if (ana[0].equals("news.163.com")) {
+			News163 aaa = new News163(ana[1]);
+			aaa.saveCtt();
 		}
 	}
 	public static String crawlWeb() {
@@ -131,11 +135,14 @@ public class Main {
 		sendMail();
 		return "su";
 	}
+	public static String test() {
+		return "ss";
+	}
 	public static void main(String[] args) {
 	   // crawlWeb();
 		//myGo();
-		CSDN aaa = new CSDN("392018486");
-		System.out.println(aaa.CSDN_getTitle());
+		News163 aaa = new News163("world");
+		aaa.saveCtt();
 	    System.out.println("main finish");
   }
 }

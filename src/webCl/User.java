@@ -32,8 +32,8 @@ public class User {
 			e.printStackTrace();
 		}
 		if (cttFromSql.equals("")) {
-			cttFromSql = "^there isn't any new message in this url";
+			cttFromSql = "^no message<br>";
 		}
-		ctt.append(url + "<br/>" + cttFromSql + "\r\n------------end this url------------\r\n");
+		ctt.append(url + "<br/>" + cttFromSql + "<br>\r\n------------end this url------------\r\n<br>");
 	}
 }
